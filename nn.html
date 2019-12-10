@@ -6,13 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body,html{
+            height: 100%;
+            width: 100%;
+        }
         div{
             width: 160px;
             height: 160px;
         }
         #box{
             position: relative;
-            margin: 200px auto;
+            margin: auto;
+            padding-top: 200px;
             transform-style: preserve-3d;
             animation: move 8s infinite linear;
         }
@@ -156,7 +165,7 @@
         }
     </style>
 </head>
-<body>
+<body style="background: url(./f.jpg);background-size:contain;">
     <div id = "box">
         <!-- 前 -->
         <div class="f n">
