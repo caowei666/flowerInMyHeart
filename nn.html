@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 160px;
+            height: 160px;
+        }
+        #box{
+            position: relative;
+            margin: 200px auto;
+            transform-style: preserve-3d;
+            animation: move 8s infinite linear;
+        }
+        .n{
+            position: absolute;
+            background: #ccc;
+            opacity: 0.8;
+            text-align: center;
+        }
+        .n img{
+            height: 100%;
+            width: 100%;
+        }
+        .f{
+            transform: translateZ(80px);
+        }
+        .f1{
+            transform: scale(1.3) translateZ(120px);
+            opacity: 0.3;
+        }
+        .f1 img{
+            opacity: 0;
+        }
+        .a{
+            transform: translateZ(-80px);
+        }
+        .a1{
+            transform: scale(1.3) translateZ(-120px);
+            opacity: 0.3;
+        }
+        .a1 img{
+            opacity: 0;
+        }
+        .b{
+            transform: translateX(-80px) rotateY(-90deg);
+        }
+        .b1{
+            opacity: 0.3;
+            transform: scale(1.3) translateX(-120px) rotateY(-90deg);
+        }
+        .b1 img{
+            opacity: 0;
+        }
+        .c{
+            transform: translateX(80px) rotateY(90deg);
+        }
+        .c1{
+            opacity: 0.3;
+            transform: scale(1.3) translateX(120px) rotateY(90deg);
+        }
+        .c1 img{
+            opacity: 0;
+        }
+        .d{
+            transform: translateY(80px) rotateX(90deg);
+        }
+        .d1{
+            transform: scale(1.3) translateY(120px) rotateX(90deg);
+            opacity: 0.3;
+        }
+        .d1 img{
+            opacity: 0;
+        }
+        .e{
+            transform: translateY(-80px) rotateX(-90deg);
+        }
+        .e1{
+            transform: scale(1.3) translateY(-120px) rotateX(-90deg);
+            opacity: 0.3;
+        }
+        .e1 img{
+            opacity: 0;
+        }
+        #box:hover .f1{
+            opacity: 1;
+            transform: scale(1.5) translateZ(160px);
+            transition: all 1s;
+            background: #ddd;
+        }
+        #box:hover .f1 img{
+            opacity: 0.8;
+        }
+        #box:hover .a1{
+            opacity: 1;
+            transform: scale(1.5) translateZ(-160px);
+            transition: all 1s;
+            background: #ddd;
+        }
+        #box:hover .a1 img{
+            opacity: 0.8;
+        }
+        #box:hover .b1{
+            opacity: 1;
+            transform: scale(1.5) translateX(-160px) rotateY(-90deg);
+            transition: all 1s;
+            background: #ddd;
+        }
+        #box:hover .b1 img{
+            opacity: 0.8;
+        }
+        #box:hover .c1{
+            opacity: 1;
+            transform: scale(1.5) translateX(160px) rotateY(90deg);
+            transition: all 1s;
+            background: #ddd;
+        }
+        #box:hover .c1 img{
+            opacity: 0.8;
+        }
+        #box:hover .d1{
+            opacity: 1;
+            transform: scale(1.5) translateY(160px) rotateX(90deg);
+            transition: all 1s;
+            background: #ddd;
+        }
+        #box:hover .d1 img{
+            opacity: 0.8;
+        }
+        #box:hover .e1{
+            opacity: 1;
+            transform: scale(1.5) translateY(-160px) rotateX(-90deg);
+            transition: all 1s;
+            background: #ddd;
+        }
+        #box:hover .e1 img{
+            opacity: 0.8;
+        }
+        @keyframes move{
+        0% {
+            transform: rotateX(0deg) rotateY(0deg);
+        }
+        33%{
+            transform: rotateX(30deg) rotateY(120deg);
+        }
+        66%{
+            transform: rotateX(-30deg) rotateY(240deg);
+        }
+        100% {
+            transform: rotateX(0) rotateY(360deg);
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id = "box">
+        <!-- 前 -->
+        <div class="f n">
+            <img src="./1.jpg" alt="">
+        </div>
+        <div class="f n f1">
+            <img src="./5.jpg" alt="">
+        </div> 
+         <!--后  -->
+        <div class="a n">
+            <img src="./2.jpg" alt="">
+        </div>
+        <div class="a n a1">
+            <img src="./6.jpg" alt="">
+        </div>
+        <!-- 左 -->
+        <div class="b n">
+            <img src="./3.jpg" alt="">
+        </div>
+        <div class="b n b1">
+            <img src="./7.jpg" alt="">
+        </div>
+        <!-- 右 -->
+        <div class="c n">
+            <img src="./4.jpg" alt="">
+        </div>
+        <div class="c n c1">
+            <img src="./8.jpg" alt="">
+        </div>
+        <!-- 上 -->
+        <div class="d n">
+            <img src="./5.jpg" alt="">
+        </div>
+        <div class="d n d1">
+            <img src="./9.jpg" alt="">
+        </div>
+        <!-- 下 -->
+        <div class="e n">
+            <img src="./6.jpg" alt="">
+        </div>
+        <div class="e n e1">
+            <img src="./10.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>
